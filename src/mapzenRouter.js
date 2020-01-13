@@ -20,7 +20,8 @@
       // In future, lrm-mapzen will consider exposing routingOptions object to users
       this.options.routingOptions = {};
       for (var key in options) {
-        if (key !== 'serviceUrl' || key !== 'timeout') {
+        if (key === 'serviceUrl' || key === 'timeout') ;
+        else {
           this.options.routingOptions[key] = options[key];
         }
       }

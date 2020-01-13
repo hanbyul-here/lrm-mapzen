@@ -1,11 +1,12 @@
 {
   "name": "lrm-mapzen",
-  "version": "1.3.5",
+  "version": "1.3.6",
   "description": "Support for Turn By Turn by Mapzen in Leaflet Machine",
   "main": "src/index.js",
   "scripts": {
     "dist": "./scripts/dist.sh",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify -t browserify-shim src/*.js > dist/lrm-mapzen.js"
   },
   "keywords": [
     "leaflet",
@@ -20,29 +21,29 @@
       "github": "https://github.com/kdiluca"
     }
   ],
-  "author": "Hanbyul Jo <hanbyul@mapzen.com>",
+  "author": "Hanbyul Jo <boonpeel@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mapzen/lrm-mapzen.git"
+    "url": "https://github.com/nextzen/lrm-mapzen.git"
   },
-  "homepage": "https://github.com/mapzen/lrm-mapzen",
+  "homepage": "https://github.com/nextzen/lrm-mapzen",
   "bugs": {
-    "url": "https://github.com/mapzen/lrm-mapzen/issues"
+    "url": "https://github.com/nextzen/lrm-mapzen/issues"
   },
   "dependencies": {
-    "@mapbox/polyline": "0.2.0",
+    "@mapbox/polyline": "^0.2.0",
     "@mapbox/corslite": "0.0.7"
   },
   "browserify-shim": {
     "leaflet": "global:L"
   },
   "devDependencies": {
-    "browserify": "^8.1.3",
-    "browserify-shim": "^3.8.2",
-    "node-sass": "^4.5.3",
-    "uglify-js": "^2.4.16",
-    "uglifyify": "^3.0.1"
+    "browserify": "^16.5.0",
+    "browserify-shim": "^3.8.14",
+    "node-sass": "^4.13.0",
+    "uglify-js": "^3.7.5",
+    "uglifyify": "^5.0.2"
   },
   "directories": {
     "example": "examples"
